@@ -1,6 +1,6 @@
 {
   "name": "openinfrastructure-http_msi",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "author": "openinfrastructure",
   "summary": "Allow http URL's for the windows package provider",
   "license": "Apache-2.0",
@@ -8,6 +8,32 @@
   "project_page": "https://github.com/openinfrastructure/http_msi",
   "issues_url": "https://github.com/openinfrastructure/http_msi/issues",
   "dependencies": [ ],
-  "data_provider": null
+  "data_provider": null,
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "windows",
+      "operatingsystemrelease": [
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "2003",
+        "2008",
+        "2012",
+        "2016"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "pe",
+      "version_requirement": "3.2.x"
+    },
+    {
+      "name": "puppet",
+      "version_requirement": "3.x"
+    }
+  ]
 }
 
