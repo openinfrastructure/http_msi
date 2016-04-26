@@ -1,0 +1,15 @@
+{
+  "name": "openinfrastructure-http_msi",
+  "version": "4.0.0",
+  "author": "openinfrastructure",
+  "summary": "Allow http URL's for the windows package provider",
+  "license": "Apache-2.0",
+  "source": "https://github.com/openinfrastructure/http_msi",
+  "project_page": "https://github.com/openinfrastructure/http_msi",
+  "issues_url": "https://github.com/openinfrastructure/http_msi/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ],
+  "data_provider": null
+}
+
