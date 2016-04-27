@@ -1,4 +1,5 @@
 require 'uri'
+require 'puppet'
 
 # This is really defensive code in the event Puppet changes and the monkey
 # patching would be broken.  The idea is to continue working, just warn once
@@ -6,8 +7,8 @@ require 'uri'
 msg = "fix for installing MSI packages via HTTP (PUP-3317) has been disabled"
 begin
   require 'puppet/provider/package/windows/msi_package'
-rescue LoadError
-  Puppet.warn_once "Could not load msi_package.rb, #{msg} "
+rescue LoadError => e
+  Puppet.warn_once "Could not load #{e}, #{msg} "
 else
   klass_name = "Puppet::Provider::Package::Windows::MsiPackage"
   if not Module.const_defined?(klass_name)
